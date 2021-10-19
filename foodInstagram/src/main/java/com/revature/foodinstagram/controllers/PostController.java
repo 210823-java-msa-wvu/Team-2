@@ -4,6 +4,7 @@ import com.revature.foodinstagram.beans.Comment;
 import com.revature.foodinstagram.beans.Post;
 import com.revature.foodinstagram.repositories.CommentRepo;
 import com.revature.foodinstagram.repositories.PostRepo;
+import com.revature.foodinstagram.services.PostServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,16 +14,16 @@ import java.util.List;
 @RequestMapping(path = "/posts")
 public class PostController {
 
-    private PostRepo postRepo;
+    private PostServices postServices;
 
     @Autowired
-    public PostController(PostRepo postRepo){
-        this.postRepo = postRepo;
+    public PostController(PostServices postServices){
+        this.postServices = postServices;
     }
 
     @GetMapping
     public List<Post> getAllComments(){
-        return postRepo.findAll();
+        return postServices.findAll();
     }
 
     @GetMapping(path="/{id}")
@@ -32,8 +33,8 @@ public class PostController {
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
-    public Post addPost(@RequestBody Post post) {
-        return postRepo.save(post);
+    public void addPost(@RequestBody Post post) {
+        postServices.addPost(post);
     }
 
     @PutMapping(path="/{id}")
