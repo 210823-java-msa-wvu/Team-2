@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7cbd9a8-a1e2-45a0-aa07-f8f8e8100104" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/config/ServletConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/revature/config/ServletConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Comments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Posts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Restaurants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/config/ServletConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CommentsHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CommentsRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CrudRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/PostsHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/PostsRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/RestaurantRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/ResterauntHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/UserHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/utils/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/application/ServletApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/application/ServletApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/application/ServletApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/application/ServletApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/src/main/java/com/revature/application/ServletApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Project-2/src/main/java/com/revature/beans/User.java" beforeDir="false" />
-    </list>
+    <list default="true" id="e7cbd9a8-a1e2-45a0-aa07-f8f8e8100104" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
