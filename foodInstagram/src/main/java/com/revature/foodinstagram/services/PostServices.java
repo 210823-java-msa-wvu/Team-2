@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.revature.foodinstagram.repositories.PostRepo;
 
+import java.util.List;
+
 
 @Service
 public class PostServices {
@@ -20,5 +22,13 @@ public class PostServices {
             postRepo.save(post);
         }
 
+        public List<Post> getPost() {
+        return postRepo.findAll();
+        }
+        public Post getById(Integer id){
+        return postRepo.getById(id);
+        }
+
 }
+
 

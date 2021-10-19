@@ -4,6 +4,7 @@ import com.revature.foodinstagram.beans.Post;
 import com.revature.foodinstagram.beans.Restaurant;
 import com.revature.foodinstagram.repositories.PostRepo;
 import com.revature.foodinstagram.repositories.RestaurantRepo;
+import com.revature.foodinstagram.services.RestaurantServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,16 +14,17 @@ import java.util.List;
 @RequestMapping(path = "/restaurants")
 public class RestaurantController {
 
+    private RestaurantServices restaurantServices;
     private RestaurantRepo restaurantRepo;
 
     @Autowired
-    public RestaurantController(RestaurantRepo restaurantRepo){
-        this.restaurantRepo = restaurantRepo;
+    public RestaurantController (RestaurantServices restaurantServices) {
+        this.restaurantServices = restaurantServices;
     }
 
     @GetMapping
     public List<Restaurant> getAllRestaurant(){
-        return restaurantRepo.findAll();
+        return restaurantServices.getAllRestaurant();
     }
 
     @GetMapping(path="/{id}")

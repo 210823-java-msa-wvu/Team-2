@@ -17,18 +17,18 @@ public class PostController {
     private PostServices postServices;
 
     @Autowired
-    public PostController(PostServices postServices){
+    public PostController(PostServices postServices) {
         this.postServices = postServices;
     }
 
     @GetMapping
-    public List<Post> getAllComments(){
-        return postServices.findAll();
+    public List<Post> getAllPosts() {
+        return postServices.getPost();
     }
 
-    @GetMapping(path="/{id}")
-    public Post getById(@PathVariable("id") int id){
-        return postRepo.getById(id);
+    @GetMapping(path = "/{id}")
+    public Post getById(@PathVariable("id") int id) {
+        return postServices.getById(id);
     }
 
 
@@ -36,16 +36,17 @@ public class PostController {
     public void addPost(@RequestBody Post post) {
         postServices.addPost(post);
     }
-
-    @PutMapping(path="/{id}")
-    public void updatePost(@PathVariable("id") int id, @RequestBody Post post) {
-        if (id == post.getId()) {
-            postRepo.save(post);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
-        }
-    }
-
-    @DeleteMapping(path="/{id}")
-    public void deletePost(@PathVariable("id") int id) {
-        postRepo.delete(postRepo.getById(id));
-    }
 }
+
+//    @PutMapping(path="/{id}")
+//    public void updatePost(@PathVariable("id") int id, @RequestBody Post post) {
+//        if (id == post.getId()) {
+//            postRepo.save(post);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
+//        }
+//    }
+
+//    @DeleteMapping(path="/{id}")
+//    public void deletePost(@PathVariable("id") int id) {
+//        postRepo.delete(postRepo.(id));
+//    }
+//}

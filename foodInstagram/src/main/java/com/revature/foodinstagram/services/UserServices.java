@@ -4,8 +4,10 @@ import com.revature.foodinstagram.beans.User;
 import com.revature.foodinstagram.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.plugin.dom.exception.InvalidAccessException;
 
 import javax.transaction.Transactional;
+import java.util.HashSet;
 
 @Service
 public class UserServices {
@@ -14,24 +16,17 @@ public class UserServices {
 
     @Autowired
     public UserServices(UserRepo userRepo){
-            return userRepo.findById(id);
-        }
-    }
-    
-    @Override
-    @Transactional(readOnly = true)
-    public UserDetails loadUserbyUsername(String username){
-        User user = userRepo.findByUsername(username);
-        if (user == null) throw new UsernameNotFoundException(username);
-
-        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        for (Role role : user.getRoles()){
-            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
-        }
-
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
-
+        this.userRepo = userRepo;
     }
 
+    public Boolean getByUsername(User user){
+       User u =  userRepo.findByUsername(user.getUsername());
+       String username = u.getUsername();
+       String password = u.getPassword();
+       if(username == user.getUsername() && password == user.getPassword()){
+           return true;
+       }
+       throw new InvalidAccessException("Invalid Credentials");
+    }
 
 }
