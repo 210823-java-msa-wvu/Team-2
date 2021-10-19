@@ -5,10 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7cbd9a8-a1e2-45a0-aa07-f8f8e8100104" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/config/ServletConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/revature/config/ServletConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Comments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Posts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/Restaurants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/beans/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/config/ServletConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CommentsHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CommentsRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/CrudRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/PostsHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/PostsRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/RestaurantRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/ResterauntHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/UserHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/java/com/revature/utils/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../foodInstagram/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/application/ServletApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/application/ServletApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/application/ServletApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/application/ServletApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/src/main/java/com/revature/application/ServletApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project-2/src/main/java/com/revature/beans/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +57,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectId" id="1zbXtSRMm7X4cD3eNIUJn8pt3e7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,10 +81,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../msa/msa-demo1/order-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../foodInstagram" />
   </component>
-  <component name="RunManager" selected="Application.ServletApplication">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\James\Desktop\P2\Team-2\Team-2\Project-2\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="ServletApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revature.application.ServletApplication" />
       <module name="Project-2" />
@@ -52,23 +102,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="connectionUtil$ConnectionUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.revature.repository.connectionUtil$ConnectionUtil" />
-      <module name="Project-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.revature.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ServletApplication" />
-        <item itemvalue="Application.connectionUtil$ConnectionUtil" />
       </list>
     </recent_temporary>
   </component>
