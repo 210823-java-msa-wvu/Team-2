@@ -12,7 +12,7 @@ export class AuthenticationService {
 
   isAuthenticated = false;
 
-  private baseUrl: string = "http://localhost:8080/P2";
+  private baseUrl: string = "/login";
 
   private headers = {'Content-Type': 'application/json'}
 

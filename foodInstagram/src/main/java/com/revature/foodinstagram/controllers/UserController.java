@@ -3,48 +3,52 @@ package com.revature.foodinstagram.controllers;
 
 import com.revature.foodinstagram.beans.User;
 import com.revature.foodinstagram.repositories.UserRepo;
+import com.revature.foodinstagram.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/users")
+@RequestMapping("/user")
 public class UserController {
 
-    private UserRepo userRepo;
+    private UserServices userServices;
 
     @Autowired
-    public UserController(UserRepo userRepo){
-        this.userRepo = userRepo;
+    public UserController(UserServices userServices){
+        this.userServices = userServices;
     }
 
-    @GetMapping
-    public List<User> getAllUsers(){
-        return userRepo.findAll();
+    @GetMapping("/all")
+    public ResponseEntity<List<User>> getAllUsers(){
+        List<User> users = userServices.findAllUsers();
+        return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @GetMapping(path="/{id}")
-    public User getById(@PathVariable("id") int id){
-        return userRepo.getById(id);
+    @GetMapping("/{id}")
+    public User getById(@PathVariable("id") Integer id){
+        return userServices.getUserById(id);
     }
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
     public User addUser(@RequestBody User user) {
-        return userRepo.save(user);
+        return userServices.addUser(user);
     }
 
     @PutMapping(path="/{id}")
     public void updateUser(@PathVariable("id") int id, @RequestBody User user) {
         if (id == user.getId()) {
-            userRepo.save(user);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
+            userServices.updateUser(user);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
         }
     }
 
     @DeleteMapping(path="/{id}")
     public void deleteUser(@PathVariable("id") int id) {
-        userRepo.delete(userRepo.getById(id));
+        userServices.deleteUser(id);
     }
 
 }

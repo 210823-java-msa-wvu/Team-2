@@ -1,19 +1,25 @@
 package com.revature.foodinstagram.beans;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name="users", schema="Project-2")
-public class User {
+@Table(name="users", schema = "Project2")
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userid")
-    private int id;
+    @Column(name = "userid", nullable = false)
+    private Integer id;
+    @Column(name = "email")
     private String email;
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
+    @Column(name = "firstname")
     private String firstname;
+    @Column(name = "lastname")
     private String lastname;
 
 
@@ -28,7 +34,7 @@ public class User {
         this.lastname = lastname;
     }
 
-    public User(int id, String email, String username, String password, String firstname, String lastname) {
+    public User(Integer id, String email, String username, String password, String firstname, String lastname) {
         this.id = id;
         this.email = email;
         this.username = username;
@@ -37,11 +43,11 @@ public class User {
         this.lastname = lastname;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -97,29 +103,5 @@ public class User {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
 
-        User user = (User) o;
-
-        if (id != user.id) return false;
-        if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (firstname != null ? !firstname.equals(user.firstname) : user.firstname != null) return false;
-        return lastname != null ? lastname.equals(user.lastname) : user.lastname == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (username != null ? username.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
-        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
-        return result;
-    }
 }

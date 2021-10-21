@@ -20,7 +20,7 @@ public class CommentController {
         this.commentRepo = commentRepo;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Comment> getAllComments(){
         return commentRepo.findAll();
     }

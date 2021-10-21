@@ -1,10 +1,11 @@
 package com.revature.foodinstagram.beans;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "restaurants", schema="Project-2")
-public class Restaurant {
+@Table(name = "restaurants", schema="Project2")
+public class Restaurant implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
