@@ -15,7 +15,6 @@ import java.util.List;
 public class RestaurantController {
 
     private RestaurantServices restaurantServices;
-    private RestaurantRepo restaurantRepo;
 
     @Autowired
     public RestaurantController (RestaurantServices restaurantServices) {
@@ -27,26 +26,26 @@ public class RestaurantController {
         return restaurantServices.getAllRestaurant();
     }
 
-    @GetMapping(path="/{id}")
+    @GetMapping("/{id}")
     public Restaurant getById(@PathVariable("id") int id){
-        return restaurantRepo.getById(id);
+        return restaurantServices.getRestaurantById(id);
     }
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
     public Restaurant addRestaurant(@RequestBody Restaurant restaurant) {
-        return restaurantRepo.save(restaurant);
+        return restaurantServices.addRestaurant(restaurant);
     }
 
     @PutMapping(path="/{id}")
     public void updateRestaurant(@PathVariable("id") int id, @RequestBody Restaurant restaurant) {
         if (id == restaurant.getRest_id()) {
-            restaurantRepo.save(restaurant);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
+            restaurantServices.updateRestaurant(restaurant);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
         }
     }
-
-    @DeleteMapping(path="/{id}")
-    public void deleteRestaurant(@PathVariable("id") int id) {
-        restaurantRepo.delete(restaurantRepo.getById(id));
-    }
+//
+//    @DeleteMapping(path="/{id}")
+//    public void deleteRestaurant(@PathVariable("id") int id) {
+//        restaurantRepo.delete(restaurantRepo.getById(id));
+//    }
 }
