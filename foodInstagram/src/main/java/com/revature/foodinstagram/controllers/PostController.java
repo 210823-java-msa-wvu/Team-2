@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping(path = "/posts")
 public class PostController {
 
-    private PostServices postServices;
+    private final PostServices postServices;
 
     @Autowired
     public PostController(PostServices postServices) {
@@ -23,30 +23,30 @@ public class PostController {
 
     @GetMapping
     public List<Post> getAllPosts() {
-        return postServices.getPost();
+        return postServices.getAllPosts();
     }
 
     @GetMapping(path = "/{id}")
     public Post getById(@PathVariable("id") int id) {
-        return postServices.getById(id);
+        return postServices.getPostById(id);
     }
 
 
     @PostMapping(consumes = "application/json", produces = "application/json")
     public void addPost(@RequestBody Post post) {
         postServices.addPost(post);
-    }
+
 }
 
-//    @PutMapping(path="/{id}")
-//    public void updatePost(@PathVariable("id") int id, @RequestBody Post post) {
-//        if (id == post.getId()) {
-//            postRepo.save(post);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
-//        }
-//    }
+    @PutMapping(path="/{id}")
+    public void updatePost(@PathVariable("id") int id, @RequestBody Post post) {
+        if (id == post.getId()) {
+            postServices.updatePost(post);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
+        }
+    }
 
-//    @DeleteMapping(path="/{id}")
-//    public void deletePost(@PathVariable("id") int id) {
-//        postRepo.delete(postRepo.(id));
-//    }
-//}
+    @DeleteMapping(path="/{id}")
+    public void deletePost(@PathVariable("id") int id) {
+        postServices.deletePost(id);
+    }
+}

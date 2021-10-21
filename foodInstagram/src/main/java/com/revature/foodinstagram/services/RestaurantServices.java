@@ -39,5 +39,9 @@ public class RestaurantServices {
             restaurantRepo.save(restaurant);
         }
     }
+
+    public void deleteRestaurant(Integer id){
+        restaurantRepo.delete(restaurantRepo.getById(id));
+    }
     
 }

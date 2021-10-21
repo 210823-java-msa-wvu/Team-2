@@ -43,9 +43,9 @@ public class RestaurantController {
             restaurantServices.updateRestaurant(restaurant);// this save method is coming from the JpaRepository -> it is like Hibernate's saveOrUpdate();
         }
     }
-//
-//    @DeleteMapping(path="/{id}")
-//    public void deleteRestaurant(@PathVariable("id") int id) {
-//        restaurantRepo.delete(restaurantRepo.getById(id));
-//    }
+
+    @DeleteMapping(path="/{id}")
+    public void deleteRestaurant(@PathVariable("id") int id) {
+        restaurantServices.deleteRestaurant(id);
+    }
 }
