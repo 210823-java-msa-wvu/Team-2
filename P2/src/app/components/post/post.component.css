@@ -35,7 +35,15 @@ body{
     font-weight: bold;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+button.hidecomments{
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(14, 159, 226);
+    margin-bottom: 3px;
+    box-shadow: inset;
+    border-color: beige;
+    border: none
+}
 .rating5:hover{
     transition: all .2s;
     color: #FE7;

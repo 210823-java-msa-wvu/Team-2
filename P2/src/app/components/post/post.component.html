@@ -16,7 +16,9 @@
                 <hr>
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
-                <div class="rec" *ngIf="post.recommend_rest == true">Restaurant is Recommended!</div>
+                <div class="rec" *ngIf="post.recommend_rest == true && post.rating == '4' || post.rating =='5'">Restaurant is Recommended!</div>
+                <div class="rec" *ngIf="post.recommend_rest == true && post.rating == '3' || post.rating =='2'">Restaurant Alright</div>
+                <div class="rec" *ngIf="post.recommend_rest == true && post.rating == '1'">Restaurant is Wack!</div>
                 <div class="rating5" *ngIf="post.rating == '5'">{{ post.rating }} Stars</div>
                 <div class="rating4" *ngIf="post.rating == '4'">{{ post.rating }} Stars</div>
                 <div class="rating3" *ngIf="post.rating == '3'">{{ post.rating }} Stars</div>
@@ -25,7 +27,8 @@
 
             </div> 
 
-            
+            <button class="hidecomments" id="hidecomments" (click)="openComments()" onload="hideComment()">Show Comments</button>
+            <div class="allComments" id="allComments" >
             <div class="comments" *ngFor="let comment of getComments(post)">
                 <hr>
                 <div class="user-info">
@@ -35,10 +38,10 @@
                 
                 <div class="comment-info">
                     <div class="cbody">{{ comment.comment_body }}</div>
-                
                 </div>
                 <hr>
             </div>
+
             <div>
                 <hr>
                 <label for="comment">
@@ -51,6 +54,7 @@
                 (click)="addComment({comment_body: comment.value, postId: post.id })">Post
                 </button>
             </div>
+        </div>
         </div>
         
         </div>
