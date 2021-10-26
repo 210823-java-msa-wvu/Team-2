@@ -117,6 +117,10 @@ button.btn-submit{
     padding-right: 10px;
 }
 
+button.btn-submit:hover{
+    background-color: darkblue;
+}
+
 button.cancel{
     color: white;
     border-radius: 8px;

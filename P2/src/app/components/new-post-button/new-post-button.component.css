@@ -24,6 +24,10 @@
         color:white;
         border-radius: 8px;
     }
+
+    button.btn:hover{
+      background-color: darkblue;
+    }
 /* 
     button {
         border-radius: 50%;
