@@ -3,11 +3,11 @@
     width: 25rem;
     /* height: 1px; */
     padding-top: 20px;
-    padding-bottom: 2px;
+    padding-bottom: 20px;
 }
 .login-body{
     background: linear-gradient(to top, #f0f2f0, #000c40);
-    height: 930px;
+    height: auto;
 }
 .createAccount{
     float: right;
