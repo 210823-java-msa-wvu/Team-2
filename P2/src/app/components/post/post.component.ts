@@ -40,17 +40,6 @@ export class PostComponent implements OnInit {
     
   }
 
-  gotoComment(){
-    
-    document.getElementById("commentForm")!.style.display = "block";
-    
-    
-  }
-  
-  cancel(){
-    document.getElementById("commentForm")!.style.display = "none";
-  }
-
   addComment(input: any){
     console.log(input);
     this.commentService.addComment(input)
@@ -59,14 +48,26 @@ export class PostComponent implements OnInit {
           console.log(res)
         },
         err => console.log(err)
-      )
-    
+      ) 
+  }
+  openComments(){
+    var x = document.getElementById("allComments")!;
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  hideComment(){
+    document.getElementById("allComments")!.style.display = "none";
   }
 
   getComments(post: any){
     return post.comment;
   }
-   getId(post: any){
+
+  getId(post: any){
      console.log(post.id);
      return post.id;
    }

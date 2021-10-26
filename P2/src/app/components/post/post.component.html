@@ -12,28 +12,36 @@
             </div>
             <hr>
             <div class="post-info">
-                <h5 class="title">{{ post.id }} {{ post.title }}</h5>
+                <h5 class="title">{{ post.title }}</h5>
                 <hr>
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
-                <div class="rec" *ngIf="post.recommend_rest == true">Restaurant is Recommended!</div>
-                <div class="rating">{{ post.rating }} Stars</div>
+                <div class="rec" *ngIf="post.recommend_rest == true">Restaurant Recommendation:</div>
+                <div class="recommendedGood" *ngIf="post.recommend_rest == true && post.rating == '4' || post.rating =='5'"></div>
+                <!-- <div class="rec">Restaurant Recommended </div> -->
+                <div class="recommendedMaybe" *ngIf="post.recommend_rest == true && post.rating == '3' || post.rating =='2'"></div>                
+                <!-- <div class="rec">Restaurant Rating is Wack!</div> -->
+                <div class="recommendedBad" *ngIf="post.recommend_rest == true && post.rating == '1'"></div>
+                <div class="rating5" *ngIf="post.rating == '5'">{{ post.rating }} Stars</div>
+                <div class="rating4" *ngIf="post.rating == '4'">{{ post.rating }} Stars</div>
+                <div class="rating3" *ngIf="post.rating == '3'">{{ post.rating }} Stars</div>
+                <div class="rating2" *ngIf="post.rating == '2'">{{ post.rating }} Stars</div>
+                <div class="rating1" *ngIf="post.rating == '1'">{{ post.rating }} Stars</div>
             </div> 
 
-            
             <div class="comments" *ngFor="let comment of getComments(post)">
                 <hr>
                 <div class="user-info">
-                    <p class="name">{{ comment.user.firstname }} {{ comment.user.lastname }}</p>
+                    <!-- <p class="name">{{ comment.user.firstname }} {{ comment.user.lastname }}</p> -->
                     <p class="username">@{{ comment.user.username }} </p>
                 </div>
                 
                 <div class="comment-info">
                     <div class="cbody">{{ comment.comment_body }}</div>
-                
                 </div>
-                <hr>
+                <!-- <hr> -->
             </div>
+
             <div>
                 <hr>
                 <label for="comment">

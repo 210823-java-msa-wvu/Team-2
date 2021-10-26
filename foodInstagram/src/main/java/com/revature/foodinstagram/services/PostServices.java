@@ -3,6 +3,7 @@ package com.revature.foodinstagram.services;
 import com.revature.foodinstagram.beans.Comment;
 import com.revature.foodinstagram.beans.Post;
 import com.revature.foodinstagram.repositories.CommentRepo;
+import org.hibernate.annotations.OrderBy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.revature.foodinstagram.repositories.PostRepo;
@@ -30,10 +31,9 @@ public class PostServices {
         }
         return null;
     }
-
     public List<Post> getAllPosts() {
 
-        List<Post> post = postRepo.findAll();
+        List<Post> post = postRepo.findByOrderByIdAsc();
         System.out.println(post);
         List<Comment> comments = commentRepo.findAll();
         System.out.println(comments);

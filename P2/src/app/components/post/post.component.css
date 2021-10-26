@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 body{ 
     background: white !important;
     height: auto;
+=======
+
+.container{
+    padding-top: 100px;
+>>>>>>> main
 }
 .header{
     text-align: center;
@@ -9,7 +15,7 @@ body{
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: none;
+    /* background-color: none; */
     margin-bottom: 10px;
     margin-right: 10px;
 
@@ -19,9 +25,9 @@ body{
 }
 .card{
     align-items: right;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    background-color: rgba(29, 58, 82, 0.274);
+    background-color: #7e9fc9;
     padding-left: 10px;
     padding-right: 10px;
     
@@ -29,18 +35,53 @@ body{
 .title{
     text-align: center;
     font-weight: bold;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.username{
+    font-weight: 550;
 }
 
 .name{
     font-weight: bold;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.rating:hover{
+button.hidecomments{
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(14, 159, 226);
+    margin-bottom: 3px;
+    box-shadow: inset;
+    border-color: beige;
+    border: none;
+    width: max-content;
+    align-self: center;
+}
+.rating5:hover{
     transition: all .2s;
     color: #FE7;
     text-shadow: 0 0 20px rgb(153, 145, 34);
 }
+.rating4:hover{
+    transition: all .2s;
+    color: #FE7;
+}
+.rating3:hover{
+    transition: all .2s;
+    color: rgb(255, 198, 9);
+}
+.rating2:hover{
+    transition: all .2s;
+    color: rgb(238, 141, 14); 
+}
+.rating1:hover{
+    transition: all .2s;
+    color: rgb(223, 7, 7);
+    text-shadow: 0 0 20px rgb(153, 34, 34);
+
+}
+
 .image{
     height: 400px;
     width: 100%;
@@ -82,4 +123,42 @@ button.cancel{
     background-color: rgb(14, 159, 226);
     border-style: none;
     border-top: 10px;
+}
+
+div.recommendedGood{
+    
+   height: 20px;
+   width: 10px;
+   border-bottom: 5px solid rgb(0, 255, 0);
+   border-right: 5px solid rgb(0, 255, 0);
+   transform: rotate(20deg);
+}
+
+div.recommendedMaybe{
+    height: 20px;
+    width: 10px;
+    border-bottom: 5px solid rgb(251, 255, 0);
+    border-right: 5px solid rgb(251, 255, 0);
+    transform: rotate(20deg);
+ }
+ 
+ div.recommendedBad{
+    height: 25px;
+    width: 40px;
+    background-color: none;
+    border-radius: 5px;
+    position: relative;
+ }
+
+ div.recommendedBad::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* use the hex value here... */
+    font-size: 20px; 
+    color: #FFF;
+    /* line-height: 100px; */
+    text-align: left;
 }
