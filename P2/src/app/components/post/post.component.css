@@ -1,5 +1,10 @@
 .container{
     padding-top: 100px;
+    
+}
+body{
+    background-color: white;
+    color: white;
 }
 .header{
     text-align: center;
@@ -11,8 +16,8 @@
     /* background-color: none; */
     margin-bottom: 10px;
     margin-right: 10px;
-
 }
+
 .container{
     width: 50%;
 }
@@ -20,7 +25,7 @@
     align-items: right;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(29, 58, 82, 0.274);
+    background-color: #426a9eaf;
     padding-left: 10px;
     padding-right: 10px;
     
@@ -105,9 +110,11 @@ button.btn{
 button.btn-submit{
     color:white;
     border-radius: 8px;
-    background-color: rgb(14, 159, 226);
+    background-color: #1E3148;
     border-style: none;
     margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 button.cancel{
