@@ -36,11 +36,30 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.rating:hover{
+.rating5:hover{
     transition: all .2s;
     color: #FE7;
     text-shadow: 0 0 20px rgb(153, 145, 34);
 }
+.rating4:hover{
+    transition: all .2s;
+    color: #FE7;
+}
+.rating3:hover{
+    transition: all .2s;
+    color: rgb(255, 198, 9);
+}
+.rating2:hover{
+    transition: all .2s;
+    color: rgb(238, 141, 14); 
+}
+.rating1:hover{
+    transition: all .2s;
+    color: rgb(223, 7, 7);
+    text-shadow: 0 0 20px rgb(153, 34, 34);
+
+}
+
 .image{
     height: 400px;
     width: 100%;

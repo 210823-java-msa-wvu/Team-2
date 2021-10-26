@@ -17,7 +17,12 @@
                 <img class="image" src="{{ post.image_url }}">
                 <div class="body">Review: {{ post.body }}</div>
                 <div class="rec" *ngIf="post.recommend_rest == true">Restaurant is Recommended!</div>
-                <div class="rating">{{ post.rating }} Stars</div>
+                <div class="rating5" *ngIf="post.rating == '5'">{{ post.rating }} Stars</div>
+                <div class="rating4" *ngIf="post.rating == '4'">{{ post.rating }} Stars</div>
+                <div class="rating3" *ngIf="post.rating == '3'">{{ post.rating }} Stars</div>
+                <div class="rating2" *ngIf="post.rating == '2'">{{ post.rating }} Stars</div>
+                <div class="rating1" *ngIf="post.rating == '1'">{{ post.rating }} Stars</div>
+
             </div> 
 
             
