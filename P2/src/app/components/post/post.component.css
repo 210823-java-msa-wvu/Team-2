@@ -1,6 +1,5 @@
-body{ 
-    background: linear-gradient(to top, #f0f2f0, #000c40b9) !important;
-    height: auto;
+.container{
+    padding-top: 100px;
 }
 .header{
     text-align: center;
