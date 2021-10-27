@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface PostRepo extends JpaRepository<Post, Integer> {
     List<Post> findByOrderByIdAsc();
+    List<Post> findByOrderByIdDesc();
 }

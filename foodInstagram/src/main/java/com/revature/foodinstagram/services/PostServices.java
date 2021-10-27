@@ -33,7 +33,7 @@ public class PostServices {
     }
     public List<Post> getAllPosts() {
 
-        List<Post> post = postRepo.findByOrderByIdAsc();
+        List<Post> post = postRepo.findByOrderByIdDesc();
         System.out.println(post);
         List<Comment> comments = commentRepo.findAll();
         System.out.println(comments);
