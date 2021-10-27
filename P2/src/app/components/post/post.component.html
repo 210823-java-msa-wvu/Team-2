@@ -1,15 +1,7 @@
 <body>
 <app-navbar></app-navbar>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
-</head>
+
 <div class="container">
-    <!-- <div class="header">
-        <h1>FoodStagram</h1>
-    </div> --><div class="allComments" id="allComments">
         <div class="posts" *ngFor="let post of posts">
             <div class="card">
             <div class="user-info">
@@ -20,7 +12,7 @@
             <div class="post-info">
                 <h5 class="title">{{ post.title }}</h5>
                 <hr>
-                <img class="image" src="{{ post.image_url }}">
+                <img class="image" src="{{ post.image_url || this.food }}">
                 <div class="body">Review: {{ post.body }}</div>
                 <div class="rec" *ngIf="post.recommend_rest == true">Restaurant Recommendation:</div>
                 <div class="recommendedGood" *ngIf="post.recommend_rest == true && post.rating == '4' || post.rating =='5'"></div>
@@ -63,11 +55,7 @@
         </div>
         
         </div>
-</div>
     </div>
-
-
->
 
 
 
