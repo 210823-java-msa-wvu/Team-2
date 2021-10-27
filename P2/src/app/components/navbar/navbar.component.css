@@ -10,5 +10,8 @@ a.navbar-brand:hover{
     transition: all .2s;
     transform: rotate(360deg) scale(1.3);
     color: #8CAACF;
-
+}
+a.navbar-brand{
+    font-family: 'Goudy Old Style';
+    font-size: 26px;
 }
