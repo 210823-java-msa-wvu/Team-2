@@ -56,22 +56,77 @@ button.hidecomments{
     width: max-content;
     align-self: center;
 }
+div.rating5{
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(252, 231, 74);
+    transition: all .2s;
+}
+div.rating5::before{
+    content: '\f005 \f005 \f005 \f005 \f005';
+    font-family: FontAwesome;
+}
 .rating5:hover{
     transition: all .2s;
-    color: #FE7;
+    color: rgb(245, 222, 51);
     text-shadow: 0 0 20px rgb(153, 145, 34);
+}
+div.rating4{
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(252, 231, 74);
+    transition: all .2s;
+}
+div.rating4::before{
+    content: '\f005 \f005 \f005 \f005 \f006';
+    font-family: FontAwesome;
 }
 .rating4:hover{
     transition: all .2s;
-    color: #FE7;
+    color: rgb(240, 218, 50);
+}
+div.rating3{
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(252, 210, 74);
+    transition: all .2s;
+}
+div.rating3::before{
+    content: '\f005 \f005 \f005 \f006 \f006';
+    font-family: FontAwesome;
 }
 .rating3:hover{
     transition: all .2s;
     color: rgb(255, 198, 9);
 }
+div.rating2{
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(252, 116, 74);
+    transition: all .2s;
+}
+div.rating2::before{
+    content: '\f005 \f005 \f006 \f006 \f006';
+    font-family: FontAwesome;
+}
 .rating2:hover{
     transition: all .2s;
-    color: rgb(238, 141, 14); 
+    color: rgb(238, 115, 14); 
+}
+div.rating1{
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(252, 231, 74);
+    transition: all .2s;
+}
+div.rating1::before{
+    content: '\f005 \f006 \f006 \f006 \f006';
+    font-family: FontAwesome;
 }
 .rating1:hover{
     transition: all .2s;
