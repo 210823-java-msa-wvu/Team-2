@@ -76,7 +76,7 @@ div.rating4{
     float: left;
     padding: 10px;
     font-size: 20px;
-    color: rgb(252, 231, 74);
+    color: yellow;
     transition: all .2s;
 }
 div.rating4::before{
@@ -85,7 +85,8 @@ div.rating4::before{
 }
 .rating4:hover{
     transition: all .2s;
-    color: rgb(240, 218, 50);
+    color: rgb(255, 251, 1);
+    text-shadow: 0 0 20px rgba(153, 145, 34, 0.767);
 }
 div.rating3{
     float: left;
@@ -100,7 +101,8 @@ div.rating3::before{
 }
 .rating3:hover{
     transition: all .2s;
-    color: rgb(255, 198, 9);
+    color: rgb(255, 202, 29);
+    text-shadow: 0 0 20px rgba(153, 121, 34, 0.767);
 }
 div.rating2{
     float: left;
@@ -116,12 +118,13 @@ div.rating2::before{
 .rating2:hover{
     transition: all .2s;
     color: rgb(238, 115, 14); 
+    text-shadow: 0 0 20px rgba(194, 109, 11, 0.767);
 }
 div.rating1{
     float: left;
     padding: 10px;
     font-size: 20px;
-    color: rgb(252, 231, 74);
+    color: rgb(252, 86, 74);
     transition: all .2s;
 }
 div.rating1::before{
