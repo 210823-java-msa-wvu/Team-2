@@ -9,7 +9,7 @@
 <div class="container">
     <!-- <div class="header">
         <h1>FoodStagram</h1>
-    </div> -->
+    </div> --><div class="allComments" id="allComments">
         <div class="posts" *ngFor="let post of posts">
             <div class="card">
             <div class="user-info">
@@ -34,7 +34,7 @@
                 <div class="rating2" *ngIf="post.rating == '2'"></div>
                 <div class="rating1" *ngIf="post.rating == '1'"></div>
             </div> 
-
+            <!-- <button (click)="openComments"> Show Comments</button> -->
             <div class="comments" *ngFor="let comment of getComments(post)">
                 <hr>
                 <div class="user-info">
@@ -63,6 +63,7 @@
         </div>
         
         </div>
+</div>
     </div>
 
 

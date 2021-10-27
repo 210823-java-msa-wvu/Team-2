@@ -42,6 +42,7 @@ export class PostComponent implements OnInit {
     this.commentService.addComment(input)
       .subscribe(
         res => {
+          window.location.reload();
           console.log(res)
         },
         err => console.log(err)

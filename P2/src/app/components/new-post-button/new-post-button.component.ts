@@ -39,6 +39,7 @@ export class NewPostButtonComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
+          window.location.reload();
         },
         err => console.log(err)
       )
