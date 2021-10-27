@@ -9,6 +9,9 @@ body{
 .header{
     text-align: center;
 }
+.user-info{
+    padding-top: 10px;
+}
 .post-button{
     position: fixed;
     bottom: 0;
