@@ -135,7 +135,7 @@ div.recommendedGood{
    width: 10px;
    border-bottom: 5px solid rgb(0, 255, 0);
    border-right: 5px solid rgb(0, 255, 0);
-   transform: rotate(20deg);
+   transform: rotate(50deg);
 }
 
 div.recommendedMaybe{
@@ -143,7 +143,7 @@ div.recommendedMaybe{
     width: 10px;
     border-bottom: 5px solid rgb(251, 255, 0);
     border-right: 5px solid rgb(251, 255, 0);
-    transform: rotate(20deg);
+    transform: rotate(50deg);
  }
  
  div.recommendedBad{
