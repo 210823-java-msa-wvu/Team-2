@@ -60,7 +60,7 @@ div.rating5{
     float: left;
     padding: 10px;
     font-size: 20px;
-    color: rgb(252, 231, 74);
+    color: yellow;
     transition: all .2s;
 }
 div.rating5::before{
@@ -69,14 +69,13 @@ div.rating5::before{
 }
 .rating5:hover{
     transition: all .2s;
-    color: rgb(245, 222, 51);
-    text-shadow: 0 0 20px rgb(153, 145, 34);
+    text-shadow: 0 0 20px yellow;
 }
 div.rating4{
     float: left;
     padding: 10px;
     font-size: 20px;
-    color: yellow;
+    color: rgb(252, 231, 74);
     transition: all .2s;
 }
 div.rating4::before{
