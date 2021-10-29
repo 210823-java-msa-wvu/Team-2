@@ -37,7 +37,7 @@
 - DBeaver
 - Postman
 
-# Project Setup
+# Application Setup
 Git clone https://github.com/210823-java-msa-wvu/Team-2.git
 
 ### Database Setup
