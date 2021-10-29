@@ -22,3 +22,23 @@
 - Searching Utility
 - Link To Resteraunts
 - Sharing post
+
+# Tech Stack
+- Angular 
+- Spring Boot/MVC/Data JPA
+- Java
+- AWS S3
+- AWS EC2
+- Jenkins
+- TypeScript
+- HTML
+- CSS
+- PostgreSQL
+- DBeaver
+- Postman
+
+# Team Members
+- Alex Easley
+- James Scarnati
+- Jorge Tinajero
+- Shailendra Nain
