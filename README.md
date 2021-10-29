@@ -38,7 +38,9 @@
 - Postman
 
 # Application Setup
-Git clone https://github.com/210823-java-msa-wvu/Team-2.git
+- Git clone https://github.com/210823-java-msa-wvu/Team-2.git
+- Adjust Endpoints in Angular Services and CORS filter in FoodInstagramApplication class in Java
+- Paths are displayed on app-module.ts in Angular
 
 ### Database Setup
 create table users (
