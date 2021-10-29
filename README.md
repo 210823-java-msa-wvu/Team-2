@@ -37,7 +37,10 @@
 - DBeaver
 - Postman
 
-# Database Setup
+# Project Setup
+Git clone https://github.com/210823-java-msa-wvu/Team-2.git
+
+### Database Setup
 create table users (
 email varchar not null unique,
 username varchar unique not null,
