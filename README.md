@@ -37,6 +37,36 @@
 - DBeaver
 - Postman
 
+# Database Setup
+create table users (
+email varchar not null unique,
+username varchar unique not null,
+password varchar not null,
+firstname varchar,
+lastname varchar,
+userID serial primary key
+)
+
+create table posts (
+posterID integer,
+title varchar,
+body varchar not null,
+image_url varchar,
+recommend_rest boolean,
+rating integer,
+postID serial primary key,
+foreign key (posterID) references users(userID)
+)
+
+create table comments (
+comment_posterID integer,
+comment_ID serial primary key,
+comment_header varchar,
+comment_body varchar not null,
+ref_postID integer,
+foreign key (ref_postID) references posts(postID),
+foreign key (comment_posterID) references users(userID)
+)
 # Team Members
 - Alex Easley
 - James Scarnati
